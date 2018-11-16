@@ -48,7 +48,7 @@
   <script> 
   console.clear()
 
-    var w = window.innerWidth*.85, h = 900;
+    var w = window.innerWidth*.8, h = 900;
      var tooltip = floatingTooltip('gates_tooltip', 240);
     // var radius = 2;
     // var color = d3.scaleOrdinal(d3.schemeCategory20);
@@ -69,7 +69,7 @@
       .attr("width", w)
 
     var svg = d3.select("#vis").append("svg")
-      .attr("width", w)
+      .attr("width", w+50)
       .attr("height", h)
 
     
