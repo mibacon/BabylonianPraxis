@@ -56,7 +56,7 @@
       .domain([-.66, -.33, 0, .33, .66, 1])  
       .range(d3.schemeSpectral[7]);
 
-    var centerScale = d3.scalePoint().padding(1).range([0, w]);
+    var centerScale = d3.scalePoint().padding(1).range([0, w+75]);
     var radiusScale = d3.scalePow()
       .exponent(0.5)
       .range([2, 35])
