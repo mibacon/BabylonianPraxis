@@ -106,3 +106,8 @@ body {
   fill: #4575b4;
 }
 
+.name {
+  color:gray;
+  font-weight: bold;
+}
+
