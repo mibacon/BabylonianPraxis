@@ -1,0 +1,108 @@
+body { 
+    margin:0;
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    font-family: 'Mukta';
+    color: #626258;
+    background-color: #FFFFF5
+  }
+
+#content {
+  display: flex;
+  flex-direction: row;
+  width: 100%; 
+  margin-left: 20px;
+  height:98%;
+}
+
+#left{
+  width: 15%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+}
+
+#title {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+#subtitle {
+  padding-top: 10px;
+  color: gray;
+  line-height: 18px;
+  font-size: 14px;
+}
+
+
+#toolbar{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+
+  
+.button {
+  min-width: 130px;
+  padding: 4px 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+  text-decoration: none;
+  background-color: #E2E2CB;
+  margin: 0px 0px 5px;
+}
+
+.button.active {
+  background-color: gray;
+}
+
+
+.legend {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 14px;
+}
+.tooltip {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background: #fff;
+  opacity: .9;
+  color: black;
+  padding: 10px;
+  width: 300px;
+  font-size: 13px;
+  z-index: 10;
+}
+
+#labels {
+  margin-top: 20px;
+
+}
+
+.title {
+  fill: gray;
+  font-size: 20px;
+  line-height: 12px;
+}
+
+.negative {
+  font-size: 36px;
+  fill: #d73027;
+
+}
+
+.positive {
+  font-size: 36px;
+  fill: #4575b4;
+}
+

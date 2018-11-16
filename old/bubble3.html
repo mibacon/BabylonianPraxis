@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bubble Chart v4 - vallandingham.me</title>
+  <meta name="description" content="Using D3v4 to create a Bubble chart. Based on NYT visualization">
+  <meta name="author" content="Jim Vallandingham">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!--<link rel="stylesheet" href="css/reset.css">-->
+  <!--<link rel="stylesheet" href="css/bubble_chart.css">-->
+  <style>
+    .tooltip {
+    	position: absolute;
+    	top: 100px;
+    	left: 100px;
+      background: #fff;
+    	opacity: .9;
+      color: black;
+    	padding: 10px;
+    	width: 300px;
+    	font-size: 12px;
+    	z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nippur Archive Individuals</h1>
+    <div id="toolbar">
+      <span>Divide by: </span>
+      <a href="#" id="all" class="button active">All Individuals</a>
+      <a href="#" id="Tendency" class="button">Tendency</a>
+      <a href="#" id="Archive" class="button">Archive</a>
+      <a href="#" id="Ethnicity" class="button">Ethnicity</a>
+    </div>
+    <div id="legend"> <span id="color"> Legend <br> Weighted_Tendency</span> <br> <span id="radius"> Transaction_Count</span>  </div>
+    <div id="vis"></div>
+
+    <!--<div class="footer">-->
+    <!--  <p>A demonstration of animated bubble charts in JavaScript and D3.js</p>-->
+    <!--  <strong>This version of the code uses D3v4!</strong>-->
+    <!--  <p><a href="http://vallandingham.me/bubble_charts_with_d3v4.html">Blog Post</a> | <a href="https://github.com/vlandham/bubble_chart_v4">Code</a></p>-->
+    <!--</div>-->
+  </div>
+<script src='d3.min.js'></script>
+  <!-- <script src="//d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/d3-color.v1.min.js"></script>
+<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script> -->
+  <script src="tooltip.js"></script>
+  <script src="bubble.js"></script>
+
+ 
+
+</body>
+</html>
