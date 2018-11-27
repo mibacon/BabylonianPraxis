@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0> -->
+    <style> body {padding: 0; margin: 0;} </style>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script src="jquery.min.js"></script>
+    <style>
+      body {
+          margin: 0;
+          width:100%;
+          font-family: 'Mukta';
+          color: #626258;
+      }
+      #background {
+        opacity: 0.3;
+        position: absolute;
+        z-index: -1;
+      }
+      img {
+          object-fit: cover;
+      }
+
+      #main_title {
+          margin-left: 25%;
+          line-height: 38px;
+          font-size: 36px;
+          padding-top: 20px;
+      }
+      #main_subtitle {
+          margin-left: 25%;
+          color: gray;
+          font-size:18px;
+      }
+      .content {
+         margin-top: 20px;
+         margin-left: 25%;
+         font-size: 18px;
+         line-height: 18px;
+         width: 50%;
+    }
+      .arrow{
+          color:#626258;
+          
+          animation: glow 3s infinite alternate;
+      }
+      .arrow:hover {
+          color: gray;
+      }
+
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 0px #626258;
+        }
+        to {
+          text-shadow: 0 0 25px #626258;
+        }
+}
+
+  </style>
+   
+    
+   <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Mukta|Oswald|Rubik" rel="stylesheet">
+     <!-- <script src="https://d3js.org/d3.v4.js"></script>  -->
+  </head>
+  <body>
+       
+       <!-- image source: https://ccp.yale.edu/P296512 -->
+       <div id="background"> <img src="tablet.jpg" style="height:99vh; width:100vw"></div>
+      <div id ="first_page">
+        
+        <div id="main_title"> Common Babylonian Religious Praxis </div>
+        <div id="main_subtitle"> A statistical comparisons of religious theory and practice </div>
+        <div class="content"> <p><strong> Introduction</strong> </p>
+        <p>The ancient city of Nippur was a vibrant and ethnically diverse polis populated by Babylonians and Non-Babylonians alike. <br> <br>
+        We set out to learn how religious Babylonians were in comparison to their non-Babylonian neighbors. <span class="arrow"> &#9654</span></p> 
+        <br> 
+        <a href="./bubble.html" id="skip">Skip Intro</a>
+        </div>
+        <div class="content">
+          <p> Traditionally, scholars have turned to priestly and regal texts to learn about a civilization. <br> <br>
+          However, these texts can only reveal how the elite groups practiced their relgions and shed little light on the practices and beliefs of the commoners.
+          <br> <br>
+          What information could there be that may uncover the religious participation of regular folk? <br> <br>
+          And, how much did such potential religious participation have to do with ethnicity?
+        <span class="arrow"> &#9654</span></p></div>
+        <div class="content">
+          <p> In order to gain access to non-elite social circles, we combined information from two types of texts: <br> <br>
+          common texts recording the transactions of middle class people;<br> <br>
+          and a religious text known today as the <strong>Babylonian Almanac</strong>, which notes for each day of the calendar year whether it is positive/lucky or not.
+          <br> <br>
+          <p>Our expectation was that Babylonians would proscribe to the <strong>Babylonian Almanac</strong> and would avoid doing business on negative days, while targeting positive days for their transactions. <br> <br>
+          On the other hand, the transactions of non-Babylonians would be evenly distributed on both positive and negative days.<span class="arrow"> &#9654</span></p>
+        </div>
+        <div class="content">
+        <p>
+          We identified 2,400 individuals from 800 texts, pulled from either the Murasu or Yahudu archives.<br> <br>
+          We then determined their ethnicity as either Babylonian, Aramean, Iranian or Judean. 
+          <br> <br>
+          Finally, we established whether they tended towards conducting transactions on positive ("good luck") or negative("bad luck") days.         
+        <span class="arrow"> &#9654</span></p></div>
+        <div class="content">
+        <p>
+          In this visualization, each individual is represeted by a bubble. The size of the bubble is determined by the number of transactions the individual conducted in our corpus of texts. 
+          <br> <br>
+          Color of the circle represents the individuals tendency towards either conducting transactions on negative or positive days. <br> <br>
+          
+          
+        </p>
+        <a href="./bubble.html">Explore</a></div>
+      </div>  
+
+      <script>
+        $(document).ready(function () {
+          
+          var divs = $('.content').hide()
+          // $('div[class="content"]').hide(),
+          var i = 0;
+          
+          
+          function cycle() {
+              console.log($('.content').eq(i))
+              console.log(i)
+              divs.fadeOut(400).delay(400).eq(i).fadeIn(400);
+              i = ++i 
+              
+              
+              //% divs.length;
+          }
+          
+          cycle()
+          
+          $('.content').click(function(){cycle()})
+       
+        });
+      </script>
+        
+          
+      </div>
+  </body>
+</html>
